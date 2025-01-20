@@ -21,8 +21,8 @@ jobs:
       with:
         dotnet-version: 8.0.x
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore code/T3-PR1 Practica1.sln
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build code/T3-PR1 Practica1.sln --no-restore
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test code/T3-PR1 Practica1.sln --no-build --verbosity normal

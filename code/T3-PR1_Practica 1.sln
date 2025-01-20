@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35506.116 d17.12
+VisualStudioVersion = 17.12.35506.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T3-PR1 ConsoleApp", "T3-PR1 ConsoleApp\T3-PR1 ConsoleApp.csproj", "{B38F94EE-A77D-4525-947E-71738BEF5F67}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T3-PR1_ConsoleApp", "T3-PR1 ConsoleApp\T3-PR1_ConsoleApp.csproj", "{B38F94EE-A77D-4525-947E-71738BEF5F67}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T3-PR1 xUnit", "T3-PR1 xUnit\T3-PR1 xUnit.csproj", "{6EE08224-AA53-4A16-B9D2-579FE90E761C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T3-PR1_xUnit", "T3-PR1 xUnit\T3-PR1_xUnit.csproj", "{6EE08224-AA53-4A16-B9D2-579FE90E761C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

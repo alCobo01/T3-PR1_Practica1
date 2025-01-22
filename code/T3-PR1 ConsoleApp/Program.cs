@@ -5,24 +5,36 @@ namespace T3PR1
 {
     public class Program
     {
+        private static SistemaEnergia[] simulacionsTotals = new SistemaEnergia[10];
+        private static int simulacionsActuals = 0;
+
         public static void Main()
         {
-            int contadorSimulacions = 0;
-            bool sortirPrograma = false;
+            int quantitatSimulacions = 0;
+            bool sortirPrograma = false, simulacioFeta = false;
 
-            SistemaUtils.MostrarMissatgeBenvinguda();
+            Missatges.MostrarMissatgeBenvinguda();
             do
             {
-                SistemaUtils.MostrarMenu();
+                Missatges.MostrarMenu();
 
-                switch (SistemaUtils.LlegirNumeroValid())
+                switch (SistemaUtils.LlegirIntValid(1, 3))
                 {
                     case 1:
-                        Console.WriteLine(Missatges.OpcioUnMenuMissatge);
-                        contadorSimulacions++;
+                        Console.Write(Missatges.OpcioUnMenuMissatge);
+                        quantitatSimulacions = SistemaUtils.LlegirIntValid();
+                        Simulacio.ExecutarSimulacio(ref simulacionsTotals, ref simulacionsActuals, quantitatSimulacions);
+                        simulacioFeta = true;
                         break;
                     case 2:
-                        Console.WriteLine(contadorSimulacions > 0 ? Missatges.OpcioDosValidMenuMissatge : Missatges.OpcioDosInvalidMenuMissatge);
+                        if (simulacioFeta)
+                        {
+                            Simulacio.VeureSimulacions(simulacionsTotals);
+                        }
+                        else
+                        {
+                            Console.WriteLine(Missatges.OpcioDosInvalidMenuMissatge);
+                        }
                         break;
                     case 3:
                         Console.WriteLine(Missatges.OpcioTresMenuMissatge);

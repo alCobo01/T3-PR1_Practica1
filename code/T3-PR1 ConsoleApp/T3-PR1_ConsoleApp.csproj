@@ -8,4 +8,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\T3-PR1 xUnit\T3-PR1_xUnit.csproj" />
+    <ProjectReference Include="..\T3-PR1_ClassLibrary\T3-PR1_ClassLibrary.csproj" />
+  </ItemGroup>
+
 </Project>

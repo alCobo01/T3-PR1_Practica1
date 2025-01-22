@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="T3PR1.SistemaEnergia" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAABAAAgAAAAAAAAA=</HashCode>
+      <FileName>classes\SistemaEnergia.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="T3PR1.SistemaEolic">
+    <Position X="7.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAACAgAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>classes\SistemaEolic.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="T3PR1.SistemaHidroelectric">
+    <Position X="9.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAACAAAAAAAAACAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>classes\SistemaHidroelectric.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="T3PR1.SistemaSolar">
+    <Position X="11" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAACAAAAAAAAAAAAAAAABAAAAABAAAAAAA=</HashCode>
+      <FileName>classes\SistemaSolar.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="T3PR1.SistemaUtils" Collapsed="true">
+    <Position X="5" Y="2.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="T3PR1.Missatges" Collapsed="true">
+    <Position X="5" Y="3.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="T3PR1.Simulacio" Collapsed="true">
+    <Position X="5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAgIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>classes\Simulacio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="T3PR1.ICalculEnergia" Collapsed="true">
+    <Position X="5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAACAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>ICalculEnergia.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

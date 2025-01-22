@@ -10,9 +10,9 @@ namespace T3PR1
             int contadorSimulacions = 0;
             bool sortirPrograma = false;
 
+            SistemaUtils.MostrarMissatgeBenvinguda();
             do
             {
-                Console.WriteLine(Missatges.MissatgeBenvinguda);
                 SistemaUtils.MostrarMenu();
 
                 switch (SistemaUtils.LlegirNumeroValid())

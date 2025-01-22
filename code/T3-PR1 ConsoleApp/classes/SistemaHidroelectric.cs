@@ -2,18 +2,19 @@
 
 namespace T3PR1
 {
-    public class SistemaHidroelectric : SistemaEnergia
+    public class SistemaHidroelectric : SistemaEnergia, ICalculEnergia
     {
         public double Cabal { get; set; }
 
         public SistemaHidroelectric(DateTime data, double cabal)
         {
-            if (cabal <= 0) throw new ArgumentException("El cabal ha de ser positiu");
+            if (!ValidarDada(cabal, 20)) throw new ArgumentException("El cabal ha de ser major a 20 m^3!s");
             Data = data;
             Tipus = "Hidroelèctrica";
             Cabal = cabal;
         }
 
+        public bool ValidarDada(double cabal, int minim) => cabal > minim;
         public double CalculEnergia() => Cabal * 9.8 * 0.8;
         public void MostrarInforme()
         {

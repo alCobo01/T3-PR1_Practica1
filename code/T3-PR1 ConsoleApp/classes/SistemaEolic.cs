@@ -8,11 +8,13 @@ namespace T3PR1
 
         public SistemaEolic(DateTime data, double velocitatVent)
         {
+            if (!ValidarDada(velocitatVent, 5)) throw new ArgumentException("Les hores de sol han de ser superiors a 1!");
             Data = data;
             Tipus = "Eòlica";
             VelocitatVent = velocitatVent;
         }
 
+        public bool ValidarDada(double velocitatVent, int minim) => velocitatVent > minim;
         public double CalculEnergia() => Math.Pow(VelocitatVent, 3) * 0.2;
 
         public void MostrarInforme()

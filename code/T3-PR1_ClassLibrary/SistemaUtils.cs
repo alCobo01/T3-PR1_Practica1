@@ -4,6 +4,13 @@ namespace T3PR1
 {
     public static class SistemaUtils
     {
+        public static void MostrarMissatgeBenvinguda()
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine(Missatges.MissatgeBenvinguda);
+            Console.ForegroundColor = ConsoleColor.White;
+        }
+
         public static void MostrarMenu()
         {
             const string BenvingutMissatge = "Benvingut a EcoEnergy Solutions! Escull una opció:";
@@ -24,7 +31,7 @@ namespace T3PR1
             const string MissatgeError = "Error: si us plau, introdueix un número vàlid entre 1 i 3.";
 
             double input;
-            while (!double.TryParse(Console.ReadLine(), out input) || input <= 1 || input >= 3)
+            while (!double.TryParse(Console.ReadLine(), out input) || input < 1 || input > 3)
             {
                 Console.Write(MissatgeError);
             }

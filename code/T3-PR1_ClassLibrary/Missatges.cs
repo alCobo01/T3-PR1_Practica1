@@ -18,13 +18,18 @@ namespace T3PR1
             FinalSimulacions = "Simulacions finalitzades amb èxit! \n",
             SimulacioAcabada = "Aquesta simulació té una energia total de {0} kWh \n";
 
+        /// <summary>
+        /// Mostra el missatge de benvinguda en color groc a la consola.
+        /// </summary>
         public static void MostrarMissatgeBenvinguda()
         {
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine(Missatges.MissatgeBenvinguda);
-            Console.ForegroundColor = ConsoleColor.White;
+            SistemaUtils.MostrarMissatgeAmbColor(Missatges.MissatgeBenvinguda, ConsoleColor.Yellow);
+            Console.WriteLine("\n");
         }
 
+        /// <summary>
+        /// Mostra el menú principal a la consola amb les opcions disponibles.
+        /// </summary>
         public static void MostrarMenu()
         {
             const string BenvingutMissatge = "Benvingut a EcoEnergy Solutions! Escull una opció:";

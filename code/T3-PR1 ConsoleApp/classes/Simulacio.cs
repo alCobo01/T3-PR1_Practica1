@@ -4,6 +4,12 @@ namespace T3PR1
 {
     public static class Simulacio
     {
+        /// <summary>
+        /// Executa una sèrie de simulacions de sistemes d'energia segons la quantitat especificada.
+        /// </summary>
+        /// <param name="simulacionsTotals">Array que conté totes les simulacions realitzades fins ara.</param>
+        /// <param name="simulacionsActuals">Nombre de simulacions realitzades fins ara.</param>
+        /// <param name="quantitatSimulacio">Nombre de simulacions a realitzar en aquesta execució.</param>
         public static void ExecutarSimulacio(ref SistemaEnergia[] simulacionsTotals, ref int simulacionsActuals, int quantitatSimulacio)
         {
             const string MissatgeEscollirSistema = "\n Quin sistema vols simular? (simulació {0} de {1}): \n 1. Hidroelèctrica \n 2. Eòlica \n 3. Solar \n Sistema escollit: ";
@@ -29,7 +35,7 @@ namespace T3PR1
                                 simulacionsTotals[simulacionsActuals] = new SistemaHidroelectric(DateTime.Now, cabal);
                                 sortir = true;
                             }
-                            catch (ArgumentException ex) { SistemaUtils.MostrarMissatgeError(ex.Message, ConsoleColor.Cyan); }
+                            catch (ArgumentException ex) { SistemaUtils.MostrarMissatgeAmbColor(ex.Message, ConsoleColor.Cyan); }
                         } while (!sortir);
                         break;
                     case 2:
@@ -43,7 +49,7 @@ namespace T3PR1
                                 simulacionsTotals[simulacionsActuals] = new SistemaEolic(DateTime.Now, velocitatVent);
                                 sortir = true;
                             }
-                            catch (ArgumentException ex) { SistemaUtils.MostrarMissatgeError(ex.Message, ConsoleColor.Cyan); }
+                            catch (ArgumentException ex) { SistemaUtils.MostrarMissatgeAmbColor(ex.Message, ConsoleColor.Cyan); }
                         } while (!sortir);
                         break;
                     case 3:
@@ -57,7 +63,7 @@ namespace T3PR1
                                 simulacionsTotals[simulacionsActuals] = new SistemaSolar(DateTime.Now, horesSol); ;
                                 sortir = true;
                             }
-                            catch (ArgumentException ex) { SistemaUtils.MostrarMissatgeError(ex.Message, ConsoleColor.Cyan); }
+                            catch (ArgumentException ex) { SistemaUtils.MostrarMissatgeAmbColor(ex.Message, ConsoleColor.Cyan); }
                         } while (!sortir);
                         break;
                     default:
@@ -70,6 +76,10 @@ namespace T3PR1
             Console.WriteLine(Missatges.FinalSimulacions);
         }
 
+        /// <summary>
+        /// Mostra els informes de totes les simulacions realitzades.
+        /// </summary>
+        /// <param name="sistemes">Array que conté totes les simulacions de sistemes d'energia.</param>
         public static void VeureSimulacions(SistemaEnergia[] sistemes)
         {
             for (int i = 0; i < sistemes.Length; i++)
@@ -78,6 +88,10 @@ namespace T3PR1
             }
         }
 
+        /// <summary>
+        /// Amplia la mida de l'array de simulacions de sistemes d'energia.
+        /// </summary>
+        /// <param name="array">Array de sistemes d'energia a ampliar.</param>
         private static void AmpliarArray(ref SistemaEnergia[] array)
         {
             int nuevoTamaño = array.Length * 2;

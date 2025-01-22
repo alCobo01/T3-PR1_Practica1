@@ -1,4 +1,5 @@
 ﻿using System;
+using T3PR1;
 
 namespace T3PR1
 {
@@ -6,14 +7,33 @@ namespace T3PR1
     {
         public static void Main()
         {
-            SistemaSolar sistemaSolar = new SistemaSolar(DateTime.Now, 8);
-            sistemaSolar.MostrarInforme();
+            int contadorSimulacions = 0;
+            bool sortirPrograma = false;
 
-            SistemaEolic sistemaEolic = new SistemaEolic(DateTime.Now, 10);
-            sistemaEolic.MostrarInforme();
+            SistemaUtils.MostrarMissatgeBenvinguda();
+            do
+            {
+                SistemaUtils.MostrarMenu();
 
-            SistemaHidroelectric sistemaHidroelectric = new SistemaHidroelectric(DateTime.Now, 10);
-            sistemaHidroelectric.MostrarInforme();
+                switch (SistemaUtils.LlegirNumeroValid())
+                {
+                    case 1:
+                        Console.WriteLine(Missatges.OpcioUnMenuMissatge);
+                        contadorSimulacions++;
+                        break;
+                    case 2:
+                        Console.WriteLine(contadorSimulacions > 0 ? Missatges.OpcioDosValidMenuMissatge : Missatges.OpcioDosInvalidMenuMissatge);
+                        break;
+                    case 3:
+                        Console.WriteLine(Missatges.OpcioTresMenuMissatge);
+                        sortirPrograma = true;
+                        break;
+                    default:
+                        Console.Write(Missatges.OpcioEquivocadaMenuMissatge);
+                        break;
+                }
+            } while (!sortirPrograma);
+
         }
-    }
+    } 
 }

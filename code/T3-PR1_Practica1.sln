@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T3-PR1_ConsoleApp", "T3-PR1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T3-PR1_xUnit", "T3-PR1 xUnit\T3-PR1_xUnit.csproj", "{6EE08224-AA53-4A16-B9D2-579FE90E761C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T3-PR1_ClassLibrary", "T3-PR1_ClassLibrary\T3-PR1_ClassLibrary.csproj", "{26596566-1464-4BED-88C6-C911B7B1BB4F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6EE08224-AA53-4A16-B9D2-579FE90E761C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6EE08224-AA53-4A16-B9D2-579FE90E761C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EE08224-AA53-4A16-B9D2-579FE90E761C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26596566-1464-4BED-88C6-C911B7B1BB4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26596566-1464-4BED-88C6-C911B7B1BB4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26596566-1464-4BED-88C6-C911B7B1BB4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26596566-1464-4BED-88C6-C911B7B1BB4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

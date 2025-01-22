@@ -2,7 +2,7 @@
 
 namespace T3PR1
 {
-    public class Simulacio
+    public static class Simulacio
     {
         public static void ExecutarSimulacio(ref SistemaEnergia[] simulacionsTotals, ref int simulacionsActuals, int quantitatSimulacio)
         {

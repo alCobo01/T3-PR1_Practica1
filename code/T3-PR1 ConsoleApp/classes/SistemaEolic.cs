@@ -4,7 +4,9 @@ namespace T3PR1
 {
     public class SistemaEolic : SistemaEnergia, ICalculEnergia
     {
-        //Propietat
+        private const string _name = "Eòlica";
+
+        //Propietats
         public double VelocitatVent { get; set; }
 
         //Constuctor amb major càrrega lògica
@@ -12,7 +14,7 @@ namespace T3PR1
         {
             if (!ValidarDada(velocitatVent, 5)) throw new ArgumentException(Missatges.EolicArgumentException);
             Data = data;
-            Tipus = "Eòlica";
+            Tipus = _name;
             VelocitatVent = velocitatVent;
         }
 
@@ -20,14 +22,29 @@ namespace T3PR1
         public SistemaEolic()
         {
             Data = DateTime.Now;
-            Tipus = "Eòlica";
-            VelocitatVent = 0;
+            Tipus = _name;
+            VelocitatVent = 10;
         }
 
-       //Métodes de la clase
+        //Mètodes de la classe
+        /// <summary>
+        /// Valida la velocitat del vent en funció d'un valor mínim.
+        /// </summary>
+        /// <param name="velocitatVent">La velocitat del vent a validar.</param>
+        /// <param name="minim">El valor mínim que ha de superar la velocitat del vent.</param>
+        /// <returns>Retorna true si la velocitat del vent és superior al valor mínim, en cas contrari retorna false.</returns>
         public bool ValidarDada(double velocitatVent, int minim) => velocitatVent > minim;
+
+
+        /// <summary>
+        /// Calcula l'energia generada pel sistema eòlic.
+        /// </summary>
+        /// <returns>Retorna l'energia generada en kWh.</returns>
         public override double CalculEnergia() => Math.Pow(VelocitatVent, 3) * 0.2;
 
+        /// <summary>
+        /// Mostra un informe detallat de la simulació del Sistema Eòlic.
+        /// </summary>
         public override void MostrarInforme()
         {
             Console.WriteLine("===========================================");

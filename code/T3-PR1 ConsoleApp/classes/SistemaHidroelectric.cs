@@ -58,5 +58,12 @@ namespace T3PR1
             Console.WriteLine($"| Energía Calculada | {CalculEnergia()} kWh            |");
             Console.WriteLine("===========================================\n");
         }
+        /// <summary>
+        /// Retorna una representació en cadena de l'objecte SistemaHidroelectric.
+        /// </summary>
+        /// <returns>Una cadena que representa l'objecte actual.</returns>
+        public override string ToString() => $"SistemaHidroelectric: Data={Data}, Tipus={Tipus}, Cabal={Cabal}";
+
+
     }
 }

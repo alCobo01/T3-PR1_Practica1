@@ -57,6 +57,11 @@ namespace T3PR1
             Console.WriteLine($"| Energía Calculada | {CalculEnergia()} kWh      |");
             Console.WriteLine("===========================================\n");
         }
-        
+
+        /// <summary>
+        /// Retorna una representació en cadena del sistema eòlic.
+        /// </summary>
+        /// <returns>Una cadena que representa el sistema eòlic amb la data, la velocitat del vent i l'energia calculada.</returns>
+        public override string ToString() => $"Sistema Eòlic: {Data} - Velocitat del vent: {VelocitatVent} m/s - Energia Calculada: {CalculEnergia()} kWh";
     }
 }

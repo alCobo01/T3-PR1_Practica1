@@ -57,5 +57,12 @@ namespace T3PR1
             Console.WriteLine($"| Energía Calculada | {CalculEnergia()} kWh             |");
             Console.WriteLine("===========================================\n");
         }
+        /// <summary>
+        /// Retorna una cadena que representa l'objecte SistemaSolar.
+        /// </summary>
+        /// <returns>Una cadena que representa l'objecte actual.</returns>
+        public override string ToString() => $"SistemaSolar [Data={Data}, Tipus={Tipus}, HoresSol={HoresSol}]";
+
+
     }
 }

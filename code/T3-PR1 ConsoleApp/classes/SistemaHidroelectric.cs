@@ -30,10 +30,10 @@ namespace T3PR1
         /// <summary>
         /// Valida si el cabal és superior al mínim requerit.
         /// </summary>
-        /// <param name="cabal">El cabal a validar.</param>
+        /// <param name="dada">El cabal a validar.</param>
         /// <param name="minim">El valor mínim requerit per al cabal.</param>
         /// <returns>Retorna true si el cabal és superior al mínim, en cas contrari retorna false.</returns>
-        public bool ValidarDada(double cabal, int minim) => cabal >= minim;
+        public bool ValidarDada(double dada, int minim) => dada >= minim;
 
         /// <summary>
         /// Calcula l'energia generada pel sistema hidroelèctric.

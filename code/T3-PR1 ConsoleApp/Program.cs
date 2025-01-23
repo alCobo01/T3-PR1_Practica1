@@ -3,7 +3,7 @@ using T3PR1;
 
 namespace T3PR1
 {
-    public class Program
+    public static class Program
     {
         private static SistemaEnergia[] simulacionsTotals = new SistemaEnergia[10];
         private static int simulacionsActuals = 0;

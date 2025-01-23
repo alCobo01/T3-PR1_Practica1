@@ -30,10 +30,10 @@ namespace T3PR1
         /// <summary>
         /// Valida la velocitat del vent en funció d'un valor mínim.
         /// </summary>
-        /// <param name="velocitatVent">La velocitat del vent a validar.</param>
+        /// <param name="dada">La velocitat del vent a validar.</param>
         /// <param name="minim">El valor mínim que ha de superar la velocitat del vent.</param>
         /// <returns>Retorna true si la velocitat del vent és superior al valor mínim, en cas contrari retorna false.</returns>
-        public bool ValidarDada(double velocitatVent, int minim) => velocitatVent >= minim;
+        public bool ValidarDada(double dada, int minim) => dada >= minim;
 
 
         /// <summary>

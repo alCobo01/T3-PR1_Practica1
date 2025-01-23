@@ -2,7 +2,7 @@ using System;
 
 namespace T3PR1
 {
-    public class UnitTest
+    public class TestEcoEnergy
     {
         const int _minimEolic = 5;
         const int _minimHidroelectric = 20;

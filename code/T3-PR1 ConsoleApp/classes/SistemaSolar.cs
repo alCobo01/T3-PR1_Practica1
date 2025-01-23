@@ -34,7 +34,7 @@ namespace T3PR1
         /// <param name="horesSol">Les hores de sol a validar.</param>
         /// <param name="minim">El valor mínim que les hores de sol han de superar.</param>
         /// <returns>Retorna <c>true</c> si les hores de sol són majors que el mínim, en cas contrari <c>false</c>.</returns>
-        public bool ValidarDada(double horesSol, int minim) => horesSol > minim;
+        public bool ValidarDada(double horesSol, int minim) => horesSol >= minim;
 
         /// <summary>
         /// Calcula l'energia generada pel sistema solar.

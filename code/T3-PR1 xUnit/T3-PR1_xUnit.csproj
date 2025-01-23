@@ -18,6 +18,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\T3-PR1_ClassLibrary\T3-PR1_ClassLibrary.csproj" />
+	<ProjectReference Include="..\T3-PR1 ConsoleApp\T3-PR1_ConsoleApp.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Using Include="Xunit" />
   </ItemGroup>
 
